@@ -23,7 +23,7 @@ let sequelize = new Sequelize(
   );
   
 db.sequelize = sequelize;
-//db.Sequelize = Sequelize;
+db.Sequelize = Sequelize;
 
 db.sequelize
 .authenticate()
@@ -33,6 +33,19 @@ db.sequelize
 .catch(err => {
     console.log('Unable to connect to the database: ', err);
 });
+
+db.Teacher = require('./teacher')(sequelize, Sequelize);
+db.Class = require('./class')(sequelize, Sequelize);
+
+//   N 대 M 관계 (Teachers : Classes)
+db.Teacher.belongsToMany(db.Class, {
+    through : 'scedule',
+    foreignKey : 'teacher_id'
+});
+db.Class.belongsToMany(db.Teacher, {
+    through : 'scedule',
+    foreignKey: 'class_id',
+}); 
 
 db.secret = '(9*)5$&!3%^0%^@@2$1!#5@2!4';
 module.exports = db;
