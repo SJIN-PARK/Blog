@@ -4,7 +4,7 @@
         "username": "root",
         "password": "Battle!2",
         "database": "testdb",
-        "host": "keither0627-mysql-db.ckictjso4uh0.us-west-2.rds.amazonaws.com",
+        "host": "",
         "port": "3306",
         "dialect": "mysql"
     }
