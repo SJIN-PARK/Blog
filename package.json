@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1075.0",
     "axios": "^0.25.0",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",

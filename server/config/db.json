@@ -2,9 +2,9 @@
 {
     "development" : {
         "username": "root",
-        "password": "Yubu0428!@",
+        "password": "Battle!2",
         "database": "testdb",
-        "host": "127.0.0.1",
+        "host": "keither0627-mysql-db.ckictjso4uh0.us-west-2.rds.amazonaws.com",
         "port": "3306",
         "dialect": "mysql"
     }

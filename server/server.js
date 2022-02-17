@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = require('./route');
 
 //const db = require('./config/db'); // changed db connection way
 const sequelize = require('./models').sequelize;
@@ -10,6 +11,7 @@ const bodyParser = require('body-parser');
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use('/', router);
 
 const {
     Teacher,
