@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/server/config/awsConfig.json
+
 # production
 /build
 
